@@ -18,6 +18,8 @@ void sighup_handler(int signal) {
 }
 
 int main(void) {
+	printf("Server's PID: %d\n", getpid());
+
 	int socket_fd;
 	socket_fd = socket(AF_INET, SOCK_STREAM, 0);
 	if (socket_fd < 0) {
